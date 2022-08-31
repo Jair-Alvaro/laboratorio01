@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formularios en html 5 -Tecsup</title>
+</head>
+<body>
+    <h1> Nuevas caracteristicas de Html 5 - Diseño Web</h1>
+    <form id = "form-order">
+        <p>
+            <label for="name">Nombre (Obligatorio)</label>
+            <input type="text" name="name" id="name"
+            placeholder="Juan León"
+            autofocus
+            autocomplete
+            required>
+        </p>
+        <p>
+            <label for="password">clave (Obligatorio)</label>
+            <input type="text" name="password" id="password"
+            placeholder="ingresar clave"
+            pattern="[a-z]{3}[0-9]{4]"
+            required>(La contraseña debe tener 3 letras y 4 numeros en ese orden)
+
+        </p>
+        <p>
+            <label for="telefono">Telefono (Obligatorio)</label>
+            <input type="text" name="telefono" id="telefono"
+            placeholder="999999999"
+            >
+        </p>
+        <p>
+            <label for="email">Email (Obligatorio)</label>
+            <input type="text" name="name" id="email"
+            placeholder="ejemplo@tecsup.com,pe">
+        </p>
+        <p>
+            <label for="name">Pagina (Obligatorio)</label>
+            <input type="text" name="name" id="name"
+            placeholder="www.tecsup.edu.pe">
+        </p>
+        <p>
+            <label for="numeroejemplo">Numero Demo (Obligatorio)</label>
+            <input type="number" name="numeroejemplo" id="numeroejemplo"
+            placeholder="2" max="14" min="2" step="2">(entre 2 y 14 solo pares)
+        </p>
+        <p>
+            <label for="fecha">Fecha (Obligatorio)</label>
+            <input type="date" name="fecha" id="fecha"
+              min="2018-03-31">(minimo 31 de marzo 2018)
+        </p>
+        <p>
+            <label from="week">semana año:</label>
+            <input type="week" name="week_year">
+        </p>
+        <p>
+            <fieldset>
+                <legend>
+                    Selecciones una opcion :
+                </legend>
+                <P><label><input type="radio" name="prioridad" value="baja" checked="">Baja</label></P>
+                <P><label><input type="radio" name="prioridad" value="media">media</label></P>
+                <P><label><input type="radio" name="prioridad" value="alta">alta</label></P>
+            </fieldset>
+        </p>
+        <p>
+            <fieldset>
+                <legend>
+                    Selecciones una caja de texto :
+                </legend>
+                <P><label><input type="checkbox" name="envio" value="urgente" checked="">Urgente</label></P>
+                <P><label><input type="checkbox" name="envio" value="super">super urgente</label></P>
+                <P><label><input type="checkbox" name="envio" value="Reembolso">Reembolso</label></P>
+            </fieldset>
+        </p>
+        <p>
+            <label for="username">Nombre de Usuario</label>
+            <input type="text" name="username" id="username">
+        </p>
+        <p>
+            <label for="pass">Contraseña</label>
+            <input type="password" name="pass" id="pass">
+        </p>
+        <inputtype="submit" name="Enviar">
+    </form>   
+</body>
+</html>

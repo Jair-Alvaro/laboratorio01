@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Viajes</title>
+    <style type="text/css">
+		#titulo{
+			color:#ffffff;
+            border-color: rgb(0, 0, 0);
+		    border-style: solid;
+		    margin-top: 15px;
+            text-align: center;
+            background-color:rgb(73, 73, 240);
+            padding-bottom: 20px;
+            padding-top: 20px;
+		}
+        h2{
+            color:rgb(0, 119, 255);
+            height:6px;
+	    }
+        #linea{
+            background-color: black;
+            height:0.5px;            
+        }
+        label{
+           display: inline-block;
+           width: 150px;
+        }
+        #seccion2{
+            display: inline-block;
+            width: 200px; 
+        }
+        #izquierda{
+            width:60%;
+        }
+        #cajon1{
+            float: left;
+        }
+        #cajon2{
+            float: left;
+        }
+        #cajon3{
+            clear:both;
+        }
+
+	</style>
+</head>
+<body>
+        <h1 id="titulo">Travel Authorization Form</h1>
+        <h2>Sección A: Información del cliente</h2>
+        <hr id="linea">
+        <form id = "form-order">
+            <p>
+                <label for="name">Cargo:</label>
+                <input type="text" name="name" id="name" style="width: 250px;"
+                required>
+            </p>
+            <p>
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="name"
+                pattern="[a-z]{3}[0-9]{4]"
+                required>
+    
+            </p>
+            <p>
+                <label for="name">Primer Apellido:</label>
+                <input type="text" name="name" id="apellido1"style="width: 250px;"
+                autocomplete
+                required>
+            </p>
+            <p>
+                <label for="name">Segundo Apellido:</label>
+                <input type="text" name="name" id="apellido2"style="width: 250px;"
+                autocomplete
+                required>
+            </p>
+            <p>
+                <label for="email">Correo electrónico:</label>
+                <input type="text" name="name" id="email"
+                placeholder>
+            </p>
+            <p>
+                <label for="telefono">Número de telefono:</label>
+                <input type="text" name="telefono" id="telefono" 
+                placeholder="999999999" max="999999999">
+            </p> 
+                <h2>Sección B: Información de Viaje</h2>
+                <hr id="linea"> 
+                <div id="cajon1">
+                    <p id="izquierda">
+                        <label id="seccion2" for="Aerolinea">Nombre de la Aerolinea:</label>
+                        <td>
+                            <select name="Aerolinea" style="width: 170px;">
+                                <option value="1">Viva Air Peru</option>
+                                <option value="2">American Airlines</option>
+                                <option value="3">Copa Airlines</option>
+                                <option value="4">LATAM</option>
+                            </select>
+                        </td>
+                    </p> 
+                    <p id="izquierda">
+                        <label id="seccion2" for="Destino">Destino:</label>
+                        <input type="text" name="Destino" id="Destino"
+                        placeholder>
+                    </p>
+                    <p id="izquierda">
+                        <label id="seccion2" for="fecha">Fecha de Salida:</label>
+                        <input type="date" name="fecha" id="fecha" min="2020-01-01" style="width: 165px;">
+                    </p>
+                    <p id="izquierda">
+                        <label id="seccion2" for="fecha">Fecha de Ingreso:</label>
+                        <input type="date" name="fecha" id="fecha" min="2020-01-01" style="width: 165px;">
+                    </p>
+                    <p id="izquierda">
+                        <label id="seccion2" for="Costo">Costo Estimado:</label>
+                        <input type="number" name="Destino" id="Costo"
+                        placeholder max="1000" min="100" style="width: 150px;"
+                        >
+                        <label id="seccion2" for="Costo"></label>
+                        <input type="number" name="Costo" id="Costo"
+                        placeholder>
+                       
+                    </p>
+                    <p id="izquierda">
+                        <label for="Cliente-i"> ¿Incluye la <br> visita al clinte?</label>
+                        <input type="text" name ="clie" id="clie"style="width: 30px;">
+                    </p>
+                </div>
+                <div id="cajon2">
+                  <h> Gastos adicionales estimados</h>
+                  <p>
+                    <label for="name">Alquiler del coche:</label>
+                    <input type="number" name="Alquiler" id="Alquiler" 
+                    placeholder max="600" min="100" style="width: 60px;"
+                    required>
+                </p>
+                <p>
+                    <label for="name">Hotel:</label>
+                    <input type="text" name="Hotel" id="Hotel" 
+                    style="width: 60px;"
+                    required>
+                </p>
+                <p>
+                    <label for="name">Comidas:</label>
+                    <input type="number" name="Comidas" id="Comidas" 
+                     style="width: 60px;"
+                    required>
+                </p>
+                <p>
+                    <label for="name">Total estimado:</label>
+                    <input type="number" name="Alquiler" id="Alquiler" 
+                    placeholder="0,00$" style="width: 60px;"
+                    required>
+                </p><br>
+                <p>
+                        <legend>
+                            Método de pago utilizado:
+                        </legend>
+                        <P ><label><input type="radio" name="pago" value="Metálico" checked="">Metálico</label> </P>
+                        <P ><label><input type="radio" name="pago" value="credito">Targeta de credito</label></P>
+                        <P ><label><input type="radio" name="pago" value="Cheque">Cheque</label></P>
+                </p>
+                </div>
+                <div id="cajon3">
+                    <p>
+                        <label for="name">Proposito de Viaje:</label>
+                        <input type="text" name="name" id="name" style="width:80%;HEIGHT: 50px"
+                        required>
+                    </p>  
+                </div> 
+                <p>
+                    <input type="button" value="Enviar">
+                </p>
+                    
+        </form>
+</body>
+</html>
